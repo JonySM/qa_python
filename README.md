@@ -1,4 +1,4 @@
-# qa_pythontest_add_new_book_add_two_books
+test_add_new_book_add_two_books
 > test_add_new_book_invalid_names
 > test_add_new_book_invalid_names
 > test_set_book_genre_for_book
