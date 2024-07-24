@@ -1,5 +1,6 @@
 from main import BooksCollector
 
+import pytest
 # класс TestBooksCollector объединяет набор тестов, которыми мы покрываем наше приложение BooksCollector
 # обязательно указывать префикс Test
 class TestBooksCollector:
@@ -22,7 +23,7 @@ class TestBooksCollector:
 
     # напиши свои тесты ниже
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
-    import pytest
+
     @pytest.mark.parametrize('name', ['  ', 'оооченьоченьоченьоченьдлинноеназваниекниги'])
     def test_add_new_book_invalid_names(self, name):
         collector = BooksCollector()
@@ -72,7 +73,6 @@ class TestBooksCollector:
 
         new_book = 'Приключения Электроника'
         collector.add_new_book(new_book)
-        collector.set_book_genre(new_book, 'Фантастика')
         collector.add_book_in_favorites(new_book)
         assert collector.get_list_of_favorites_books() == [new_book]
 
